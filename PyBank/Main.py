@@ -22,7 +22,7 @@ with open(file_to_load) as csvfile:
     for i in range(len(profit)-1):
         change_profit.append(profit[i+1]-profit[i])
                       
-
+#Max increase and decrease in profit
 increase = max(change_profit)
 month_max_increase = change_profit.index(max(change_profit))+1
 
@@ -38,6 +38,7 @@ print(f"Average Change: {round(sum(change_profit)/len(change_profit),2)}")
 print(f"Greatest Increase in Profits: {month_count[month_max_increase]} (${(str(increase))})")
 print(f"Greatest Decrease in Profits: {month_count[month_max_decrease]} (${(str(decrease))})")      
 
+#export
 output = os.path.join(".", 'output.txt')
 with open(output,"w") as new:
     new.write("Financial Analysis")
