@@ -1,20 +1,23 @@
 import os
 import csv
 
+#find path
 file_to_load = os.path.join("Resources", "budget_data.csv")
 
+#open file
 with open(file_to_load) as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ',')
     header = next(csvreader)
-     
+
+ #variables
     month_count = []
     profit = []
     change_profit = []
     
-                      
+ #total month                    
     for row in csvreader:
         month_count.append(row[0])
-        profit.append(int(row[1]))
+              profit.append(int(row[1]))
     for i in range(len(profit)-1):
         change_profit.append(profit[i+1]-profit[i])
                       
