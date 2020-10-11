@@ -28,7 +28,7 @@ month_max_increase = change_profit.index(max(change_profit))+1
 decrease = min(change_profit)
 month_max_decrease = change_profit.index(min(change_profit))+1
 
-
+#print
 print("Financial Analysis")
 print("------------------------")
 print(f"Total Months:{len(month_count)}")
